@@ -1,6 +1,7 @@
 import os
 import torch
 import gdown
+import uuid
 import streamlit as st
 from PIL import Image
 from transformers import BlipProcessor, BlipForConditionalGeneration

@@ -40,7 +40,7 @@ def inference(image, text):
 def main():
   st.title('Visual Question Answering')
   st.title('Model: BLIP. Dataset: COCO')
-  uploaded_img = st.file_uploader('__Input your image__', 'blip-base/demo.jpg', type=['jpg', 'jpeg', 'png'])
+  uploaded_img = st.file_uploader('Input Image', type=['jpg', 'jpeg', 'png'])
   example_button = st.button('Run example')
   if example_button:
         uploaded_img_path = 'blip-base/demo.jpg'

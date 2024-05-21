@@ -2,6 +2,7 @@ import os
 import torch
 import gdown
 import streamlit as st
+from PIL import Image
 from transformers import BlipProcessor, BlipForConditionalGeneration
 
 @st.cache_resource

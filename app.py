@@ -18,6 +18,14 @@ def load_model(gdrive_id='11w8Ec-PnvU0Ahw0cOoFTUOvw-ntxdJ33'):
 
 processor, model = load_model()
 
+def generate_name():
+    uuid_str = str(uuid.uuid4())
+
+    return uuid_str
+
+def delete_file(file_path):
+    os.remove(file_path)
+
 def save_upload_file(upload_file, save_folder='blip-base'):
     os.makedirs(save_folder, exist_ok=True)
     if upload_file:
@@ -54,6 +62,8 @@ def main():
   result = inference(uploaded_img_path, prompt)
   st.image(uploaded_img_path)
   st.success(result) 
+  if uploaded_img_path != 'blip-base/demo.jpg':
+    delete_file(uploaded_img_path)
 
 if __name__ == '__main__':
      main() 

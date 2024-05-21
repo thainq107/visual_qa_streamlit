@@ -38,7 +38,6 @@ def save_upload_file(upload_file, save_folder='blip-base'):
 
         return save_path
     else:
-        st.write('Upload image file unsuccess. Use example image')
         return 'blip-base/demo.jpg'
 
 def inference(image, text):

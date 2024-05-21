@@ -43,8 +43,10 @@ def main():
   st.title('Model: BLIP. Dataset: COCO')
   uploaded_img = st.file_uploader('Input Image', type=['jpg', 'jpeg', 'png'])
   example_button = st.button('Run example')
+  st.divider()
+  
   if example_button:
-        uploaded_img_path = 'blip-base/demo.jpg'
+    uploaded_img_path = 'blip-base/demo.jpg'
   else:
     uploaded_img_path = save_upload_file(uploaded_img)
 

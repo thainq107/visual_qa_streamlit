@@ -38,7 +38,8 @@ def save_upload_file(upload_file, save_folder='blip-base'):
 
         return save_path
     else:
-        raise('Image not found.')
+        st.write('Upload image file unsuccess. Use example image')
+      return 'blip-base/demo.jpg'
 
 def inference(image, text):
   raw_image = Image.open(image).convert('RGB')
